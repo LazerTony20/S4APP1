@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed May  4 15:44:49 2022
+# Process ID: 12648
+# Current directory: C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent9348 C:\Users\antho\OneDrive - USherbrooke\UdeS\Session 4\APP1 S4\Problmatique\project_prob\project_problématique.xpr
+# Log file: C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob/vivado.log
+# Journal file: C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project {C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob/project_problématique.xpr}
+INFO: [ProjectBase 1-489] The host OS only allows 260 characters in a normal path. The project is stored in a path with more than 80 characters. If you experience issues with IP, Block Designs, or files not being found, please consider moving the project to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter.
+Current project path is 'C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob'
+INFO: [Project 1-313] Project file moved from 'C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_problématique' since last save.
+WARNING: [filemgmt 56-2] Default IP Output Path : Could not find the directory 'C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_prob/project_problématique.gen/sources_1', nor could it be found using path 'C:/Users/antho/OneDrive - USherbrooke/UdeS/Session 4/APP1 S4/Problmatique/project_problématique/project_problématique.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:21 ; elapsed = 00:00:09 . Memory (MB): peak = 1095.227 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed May  4 15:45:34 2022...
