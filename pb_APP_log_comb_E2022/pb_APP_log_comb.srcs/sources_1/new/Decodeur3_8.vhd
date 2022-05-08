@@ -31,17 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity decodeur3_8 is
-    Port (	A2_3 : STD_LOGIC_VECTOR(2 downto 0),
-			LED	 : STD_LOGIC_VECTOR(7 downto 0);
+entity Decodeur3_8 is
+    Port (	A2_3 : in STD_LOGIC_VECTOR(2 downto 0);
+			LED	 : out STD_LOGIC_VECTOR(7 downto 0)
 	);
-end decodeur3_8;
+end Decodeur3_8;
 
-
-
-
-architecture decodeur3_8_arch of decodeur3_8 is
-
+architecture Behavioral of Decodeur3_8 is
 
 begin
 	with A2_3 select LED <=
@@ -52,6 +48,6 @@ begin
 		"00010000" when "100",
 		"00100000" when "101",
 		"01000000" when "110",
-		"10000000" when "111",
+		"10000000" when "111";
 
-end decodeur3_8_arch;
+end Behavioral;
