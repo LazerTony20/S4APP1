@@ -40,13 +40,12 @@ entity Add1bitB is
 end Add1bitB;
 
 architecture Behavioral of Add1bitB is
-
-process(X, Y, Ci)
+  begin
+  process(X, Y, Ci)
     begin
-    
-        begin
-        S <= X XOR Y XOR Ci;
-        Co <= (Y AND Ci) OR (X AND Ci) OR (X AND Y);
+    S <= X XOR Y XOR Ci;
+    Co <= (Y AND Ci) OR (X AND Ci) OR (X AND Y);
         
-    end process;    
+  end process;    
+  
 end Behavioral;

@@ -65,6 +65,42 @@ end component;
 signal Carry_vector : STD_LOGIC_VECTOR(3 downto 0);
 
 begin
+    
+adder1 : Add1bitA
+Port map (
+           X    => X(0),
+           Y    => Y(0),
+           S    => S(0),
+           Ci   => Carry_vector(0),
+           Co   => Carry_vector(1)
+       );
+
+adder2 : Add1bitB
+Port map (
+           X    => X(1),
+           Y    => Y(1),
+           S    => S(1),
+           Ci   => Carry_vector(1),
+           Co   => Carry_vector(2)
+       );
+       
+adder3 : Add1bitA
+Port map (
+           X    => X(2),
+           Y    => Y(2),
+           S    => S(2),
+           Ci   => Carry_vector(2),
+           Co   => Carry_vector(3)
+       );
+       
+adder4 : Add1bitB
+Port map (
+           X    => X(3),
+           Y    => Y(3),
+           S    => S(3),
+           Ci   => Carry_vector(3),
+           Co   => Carry_vector(4)
+       );
 
 
 end Behavioral;
