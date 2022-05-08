@@ -1,0 +1,18 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/AppCombi_top.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" \
+
+# Do not sort compile order
+nosort

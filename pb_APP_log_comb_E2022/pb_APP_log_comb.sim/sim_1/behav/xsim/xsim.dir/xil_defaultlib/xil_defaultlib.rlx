@@ -1,0 +1,13 @@
+0.7
+2020.2
+Nov 18 2020
+09:20:35
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd,1640209414,vhdl2008,,,,appcombi_top_tb,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/AppCombi_top.vhd,1651163486,vhdl2008,,,,appcombi_top,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd,1651164798,vhdl2008,,,,septsegments_top,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd,1635539910,vhdl2008,,,,septsegments_encodeur,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd,1651164618,vhdl2008,,,,septsegments_refreshpmod,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd,1635539910,vhdl2008,,,,synchro_module_v2,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd,1651688031,vhdl,,,,add1bita,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd,1651688727,vhdl,,,,add1bitb,,,,,,,,
+/mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd,1651686603,vhdl,,,,add4bits,,,,,,,,
