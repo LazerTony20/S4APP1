@@ -10,6 +10,7 @@ vhdl xil_defaultlib  \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd" \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd" \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Test_Bench.vhd" \
 
 vhdl2008 xil_defaultlib  \
 "../../../../pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" \

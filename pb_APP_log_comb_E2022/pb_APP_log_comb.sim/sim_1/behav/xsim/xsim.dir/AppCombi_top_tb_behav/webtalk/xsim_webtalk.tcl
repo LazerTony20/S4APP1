@@ -1,6 +1,6 @@
 webtalk_init -webtalk_dir /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/
 webtalk_register_client -client project
-webtalk_add_data -client project -key date_generated -value "Wed May  4 14:26:18 2022" -context "software_version_and_target_device"
+webtalk_add_data -client project -key date_generated -value "Sat May  7 15:22:46 2022" -context "software_version_and_target_device"
 webtalk_add_data -client project -key product_version -value "XSIM v2020.2 (64-bit)" -context "software_version_and_target_device"
 webtalk_add_data -client project -key build_version -value "3064766" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_platform -value "LIN64" -context "software_version_and_target_device"
@@ -14,7 +14,7 @@ webtalk_add_data -client project -key target_package -value "not_applicable" -co
 webtalk_add_data -client project -key target_speed -value "not_applicable" -context "software_version_and_target_device"
 webtalk_add_data -client project -key random_id -value "a425011c-b077-438a-acec-92a8d74424e7" -context "software_version_and_target_device"
 webtalk_add_data -client project -key project_id -value "6e88f38826214958bd01804f64fad5de" -context "software_version_and_target_device"
-webtalk_add_data -client project -key project_iteration -value "4" -context "software_version_and_target_device"
+webtalk_add_data -client project -key project_iteration -value "8" -context "software_version_and_target_device"
 webtalk_add_data -client project -key os_name -value "Ubuntu" -context "user_environment"
 webtalk_add_data -client project -key os_release -value "Ubuntu 20.04.3 LTS" -context "user_environment"
 webtalk_add_data -client project -key cpu_name -value "Intel(R) Core(TM) i5-6500 CPU @ 3.20GHz" -context "user_environment"
@@ -26,7 +26,7 @@ webtalk_add_data -client xsim -key Command -value "xsim" -context "xsim\\command
 webtalk_add_data -client xsim -key trace_waveform -value "true" -context "xsim\\usage"
 webtalk_add_data -client xsim -key runtime -value "1 us" -context "xsim\\usage"
 webtalk_add_data -client xsim -key iteration -value "3" -context "xsim\\usage"
-webtalk_add_data -client xsim -key Simulation_Time -value "0.03_sec" -context "xsim\\usage"
+webtalk_add_data -client xsim -key Simulation_Time -value "0.10_sec" -context "xsim\\usage"
 webtalk_add_data -client xsim -key Simulation_Memory -value "123544_KB" -context "xsim\\usage"
-webtalk_transmit -clientid 1036784505 -regid "174208431_1777515441_210748116_128" -xml /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
+webtalk_transmit -clientid 2096664082 -regid "174208431_1777515441_210748116_128" -xml /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.xml -html /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.html -wdm /mnt/home/gegi/usager/berb0401/Téléchargements/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/usage_statistics_ext_xsim.wdm -intro "<H3>XSIM Usage Report</H3><BR>"
 webtalk_terminate

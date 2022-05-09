@@ -50,26 +50,23 @@ signal InputNumber : STD_LOGIC_VECTOR (3 downto 0);
 
 begin
 
---Inst_Fct2_3 : process (Add4bits)
---    begin
---    InputNumber(0) <= ADCbin(1);
---    InputNumber(1) <= ADCbin(2);
---    InputNumber(2) <= ADCbin(3);
---    InputNumber(3) <= '0';
-Inst_Fct2_3 : Add4bits
 
-Port map (
-    X(0) => ADCbin(1),
-    X(1) => ADCbin(2),
-    X(2) => ADCbin(3),
-    X(3) => '0',
-    Y(0) => ADCbin(3),
-    Y(1) => '0',
-    Y(2) => '0',
-    Y(3) => '0',
-    Ci => '0',
-    S => A2_3
-);
---    end process Inst_Fct2_3;
+
+Inst_Fct2_3 : process(ADCbin) is
+    begin
+    InputNumber(0) <= ADCbin(1);
+    InputNumber(1) <= ADCbin(2);
+    InputNumber(2) <= ADCbin(3);
+    InputNumber(3) <= '0';
+    end process Inst_Fct2_3;
+
+--Add4bits :
+--    X <= InputNumber
+--    );
+
+--        InputNumber(0) => X(0),
+--        InputNumber(1) => X(1),
+--        InputNumber(2) => X(2),
+--        InputNumber(3) => X(3)
     
     end Behavioral;
