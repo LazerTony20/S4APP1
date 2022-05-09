@@ -4,4 +4,21 @@ Running: /opt/Xilinx/Vivado/2020.2/bin/unwrapped/lnx64.o/xelab -wto 6e88f3882621
 Using 8 slave threads.
 Starting static elaboration
 Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_unsigned
+Compiling package unisim.vcomponents
+Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
+Compiling architecture behavioral of entity xil_defaultlib.synchro_module_v2 [\synchro_module_v2(const_clk_sys...]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_encodeur [septsegments_encodeur_default]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_refreshPmod [septsegments_refreshpmod_default]
+Compiling architecture behavioral of entity xil_defaultlib.septSegments_Top [septsegments_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.AppCombi_top [appcombi_top_default]
+Compiling architecture behavioral of entity xil_defaultlib.appcombi_top_tb
+Built simulation snapshot AppCombi_top_tb_behav

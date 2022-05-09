@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 05/08/2022 09:40:10 AM
+-- Create Date: 05/09/2022 11:29:38 AM
 -- Design Name: 
--- Module Name: Fct2_3 - Behavioral
+-- Module Name: Moins_5 - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,12 +31,12 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity Fct2_3 is
-    Port ( ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
-           A2_3 : out STD_LOGIC_VECTOR (2 downto 0));
-end Fct2_3;
+entity Moins_5 is
+    Port ( ADCbin : in STD_LOGIC_VECTOR(3 downto 0);
+           Moins5 : out STD_LOGIC_VECTOR(3 downto 0));
+end Moins_5;
 
-architecture Behavioral of Fct2_3 is
+architecture Behavioral of Moins_5 is
 
 component Add4bits is
     Port ( X : in STD_LOGIC_vector(3 downto 0);
@@ -46,29 +46,34 @@ component Add4bits is
            Co : out STD_LOGIC);
 end component;
 
-signal InputNumber : STD_LOGIC_VECTOR (3 downto 0);
+--Signal Sum_2s_complement : STD_LOGIC_VECTOR(3 downto 0);
+--Signal Final_Sum : STD_LOGIC_VECTOR(3 downto 0);
+
 
 begin
 
---Inst_Fct2_3 : process (Add4bits)
---    begin
---    InputNumber(0) <= ADCbin(1);
---    InputNumber(1) <= ADCbin(2);
---    InputNumber(2) <= ADCbin(3);
---    InputNumber(3) <= '0';
-Inst_Fct2_3 : Add4bits
-Port map (
-    X(0) => ADCbin(1),
-    X(1) => ADCbin(2),
-    X(2) => ADCbin(3),
-    X(3) => '0',
-    Y(0) => ADCbin(3),
-    Y(1) => '0',
-    Y(2) => '0',
-    Y(3) => '0',
-    Ci => '0',
-    S => A2_3
-);
---    end process Inst_Fct2_3;
-    
-    end Behavioral;
+    Calcul_Moins5 : Add4bits
+    Port map (
+               Ci => '0',
+               X => "1011",
+               Y => ADCbin,
+               S => Moins5
+           );
+           
+--     Calcul_Plus1 : Add4bits
+--     Port map (
+--               Ci => '0',
+--               X => "0001",
+--               Y => Final_Sum,
+--               S => Moins5
+--               );
+               
+--process(ADCbin)
+--begin
+----invert the 3 LSB of Sum_2s_complement, do +1 if MSB of Sum_2s_complement == 1
+
+--Final_Sum <= not Sum_2s_complement;
+--Final_Sum(3) <= Sum_2s_complement(3);
+
+--end process;
+end Behavioral;
