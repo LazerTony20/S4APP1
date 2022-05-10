@@ -43,7 +43,7 @@ ARCHITECTURE behavioral OF TestBench_Thermo2Bin IS
 component Thermo2Bin is
   Port ( ADCth : in STD_LOGIC_VECTOR(11 downto 0);
         ADCbin : out STD_LOGIC_VECTOR(3 downto 0);
-        erreurT2b : out std_logic
+        erreurT2B : out std_logic
          );
 end component;
    
@@ -79,7 +79,7 @@ BEGIN
   UUT: Thermo2Bin PORT MAP(
       ADCbin => ADCbin_sim, 
       ADCth => ADCth_sim,
-      erreurT2b => erreurT2b_sim
+      erreurT2B => erreurT2b_sim
    );
 
  --> on assigne les signaux du vecteur de test vers les signaux connectés au port map. 
@@ -110,22 +110,22 @@ BEGIN
 --         wait for PERIOD; ADCbin_sim <="1111";
          
        --> Cette partie est un exemple pour simuler le thermométrique
-         wait for PERIOD; ADCth_sim <="000000000000"; --> Code normal
-         wait for PERIOD; ADCth_sim <="000000000001";
-         wait for PERIOD; ADCth_sim <="000000000011";
-         wait for PERIOD; ADCth_sim <="000000000111";
-         wait for PERIOD; ADCth_sim <="000000001111";
-         wait for PERIOD; ADCth_sim <="000000011111";
-         wait for PERIOD; ADCth_sim <="000000111111";
-         wait for PERIOD; ADCth_sim <="000001111111";
-         wait for PERIOD; ADCth_sim <="000011111111";
-         wait for PERIOD; ADCth_sim <="000111111111";
-         wait for PERIOD; ADCth_sim <="001111111111";
-         wait for PERIOD; ADCth_sim <="011111111111";
-         wait for PERIOD; ADCth_sim <="111111111111";
-         wait for PERIOD; ADCth_sim <="000000000010";  --> Code avec erreur
-         wait for PERIOD; ADCth_sim <="000000101111";
-         wait for PERIOD; ADCth_sim <="111100001111";  --> Code avec erreur
+--         wait for PERIOD; ADCth_sim <="000000000000"; --> Code normal
+--         wait for PERIOD; ADCth_sim <="000000000001";
+--         wait for PERIOD; ADCth_sim <="000000000011";
+--         wait for PERIOD; ADCth_sim <="000000000111";
+--         wait for PERIOD; ADCth_sim <="000000001111";
+--         wait for PERIOD; ADCth_sim <="000000011111";
+--         wait for PERIOD; ADCth_sim <="000000111111";
+--         wait for PERIOD; ADCth_sim <="000001111111";
+--         wait for PERIOD; ADCth_sim <="000011111111";
+--         wait for PERIOD; ADCth_sim <="000111111111";
+--         wait for PERIOD; ADCth_sim <="001111111111";
+--         wait for PERIOD; ADCth_sim <="011111111111";
+--         wait for PERIOD; ADCth_sim <="111111111111";
+--         wait for PERIOD; ADCth_sim <="000000000010";  --> Code avec erreur
+--         wait for PERIOD; ADCth_sim <="000000101111";
+--         wait for PERIOD; ADCth_sim <="111100001111";  --> Code avec erreur
          --> Cette partie représente le plan de test
          wait for PERIOD; ADCth_sim <="000000000000"; --> Test 1 : valeur voulue :0000 erreur : 0
          wait for PERIOD; ADCth_sim <="000000000001"; --> Test 2 : valeur voulue :0001 erreur : 0

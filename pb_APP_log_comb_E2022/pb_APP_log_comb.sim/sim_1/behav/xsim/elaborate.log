@@ -1,8 +1,11 @@
 Vivado Simulator 2020.2
 Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log 
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Thermo2Bin_behav xil_defaultlib.TestBench_Thermo2Bin -log elaborate.log 
 Using 2 slave threads.
 Starting static elaboration
+WARNING: [VRFC 10-4940] 'checkerr4bit' remains a black box since it has no binding entity [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd:101]
+WARNING: [VRFC 10-4940] 'checkerr4bit' remains a black box since it has no binding entity [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd:108]
+WARNING: [VRFC 10-4940] 'checkerr4bit' remains a black box since it has no binding entity [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd:115]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis
@@ -12,9 +15,11 @@ Compiling package std.textio
 Compiling package ieee.std_logic_1164
 Compiling package ieee.numeric_std
 Compiling package unisim.vcomponents
+Compiling architecture behavioral of entity xil_defaultlib.Segmentation12bits [segmentation12bits_default]
+Compiling architecture behavioral of entity xil_defaultlib.Calculnb1sur4bit [calculnb1sur4bit_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add1bitA [add1bita_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add1bitB [add1bitb_default]
 Compiling architecture behavioral of entity xil_defaultlib.Add4bits [add4bits_default]
-Compiling architecture behavioral of entity xil_defaultlib.Fct2_3 [fct2_3_default]
-Compiling architecture behavioral of entity xil_defaultlib.testbench_fct2_3
-Built simulation snapshot TestBench_Fct2_3_behav
+Compiling architecture behavioral of entity xil_defaultlib.Thermo2Bin [thermo2bin_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench_thermo2bin
+Built simulation snapshot TestBench_Thermo2Bin_behav

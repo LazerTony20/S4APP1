@@ -52,9 +52,7 @@ process(In4bit)
 	       hasZeros <= '1';
         end if;
         when '1' =>
-            if In4bit = "0000" then
-                erreur <= '0';
-            else
+            if In4bit /= "0000" then
                 erreur <= '1';
             end if;
         when others => erreur <= '1';

@@ -99,7 +99,7 @@ Port map (  In12Bit  => ADCth,
           );
 
 inst_Chk1stpack : CheckErr4bit
-Port map (  In4Bit => pack1,
+Port map (  In4Bit => pack3,
             previousHasZeros => '0',
             hasZeros => zeros1,
             erreur => err
@@ -113,14 +113,14 @@ Port map (  In4Bit => pack2,
          );
 
 inst_Chk3rdpack : CheckErr4bit
-Port map (  In4Bit => pack3,
+Port map (  In4Bit => pack1,
             previousHasZeros => zeros2,
             hasZeros => nul,
             erreur => err
          );
 
 inst_nb1pack1 : Calculnb1sur4bit
-Port map(   In4Bit => pack1,
+Port map(   In4Bit => pack3,
             count => nb1p1,
             erreur => err
          );
@@ -132,7 +132,7 @@ Port map(   In4Bit => pack2,
          );
 
 inst_nb1pack3 : Calculnb1sur4bit
-Port map(   In4Bit => pack3,
+Port map(   In4Bit => pack1,
             count => nb1p3,
             erreur => err
          );
@@ -153,10 +153,10 @@ Port map(   X4bit   => sum12,
             S4bit(0)=> ADCbin(0),
             S4bit(1)=> ADCbin(1),
             S4bit(2)=> ADCbin(2),
-            S4bit(3)=> nul
+            S4bit(3)=> ADCbin(3)
         );
 
-process(err)
+process(err,ADCth)
     begin
     erreurT2B <= err;    
 end process;
