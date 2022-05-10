@@ -2,7 +2,7 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 05/09/2022 03:12:15 PM
+-- Create Date: 05/09/2022 02:10:08 PM
 -- Design Name: 
 -- Module Name: Parite - Behavioral
 -- Project Name: 
@@ -32,12 +32,47 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity Parite is
---  Port ( );
+    Port ( S1 : in STD_LOGIC;
+           ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
+           parite : out STD_LOGIC
+    );
 end Parite;
 
 architecture Behavioral of Parite is
 
-begin
+signal pout : std_logic;
 
+begin
+process(ADCbin, S1)
+    begin
+--    case ADCbin is
+--        when "0000" => pout <= '0';
+--        when "0001" => pout <= '1';
+--        when "0010" => pout <= '1';
+--        when "0011" => pout <= '0';
+--        when "0100" => pout <= '1';
+--        when "0101" => pout <= '0';
+--        when "0110" => pout <= '0';
+--        when "0111" => pout <= '1';
+--        when "1000" => pout <= '1';
+--        when "1001" => pout <= '0';
+--        when "1010" => pout <= '0';
+--        when "1011" => pout <= '1';
+--        when "1100" => pout <= '0';
+--        when "1101" => pout <= '1';
+--        when "1110" => pout <= '1';
+--        when "1111" => pout <= '0';
+--        when others => pout <= '0';
+--    end case;
+--    case S1 is
+--        when '0' => parite <= pout;
+--        when '1' => parite <= not pout;
+--        when others => parite <= '0';
+--    end case;
+--Inversion de l'affichage de parté si l'interrupteur S1 est activé.
+        pout <= ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
+--      parite <= S1 XOR ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
+      parite <= S1 XOR pout;
+end process;
 
 end Behavioral;

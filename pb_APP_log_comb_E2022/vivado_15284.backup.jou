@@ -1,0 +1,36 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon May  9 15:42:59 2022
+# Process ID: 15284
+# Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8004 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
+# Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Parite [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source AppCombi_top_tb.tcl
+add_force {/AppCombi_top_tb/led_sim[0]} -radix hex {0 0ns} {1 50000ps} -repeat_every 100000ps
+add_force {/AppCombi_top_tb/led_sim[1]} -radix hex {0 0ns} {1 100000ps} -repeat_every 200000ps
+add_force {/AppCombi_top_tb/led_sim[2]} -radix hex {0 0ns} {1 200000ps} -repeat_every 400000ps
+add_force {/AppCombi_top_tb/led_sim[3]} -radix hex {0 0ns} {1 400000ps} -repeat_every 800000ps
+file mkdir C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd w ]
+add_files -fileset sim_1 C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Parite_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+close_sim
