@@ -55,33 +55,15 @@ begin
     
     begin
         case (Adder) is
-              when "000" =>
-                 S <= '0';
-                 Co <= '0';
-              when "001" =>
-                 S <= '1';
-                 Co <= '0';
-              when "010" =>
-                 S <= '1';
-                 Co <= '0';
-              when "011" =>
-                 S <= '0';
-                 Co <= '1';
-              when "100" =>
-                 S <= '1';
-                 Co <= '0';
-              when "101" =>
-                 S <= '0';
-                 Co <= '1';
-              when "110" =>
-                 S <= '0';
-                 Co <= '1';
-              when "111" =>
-                 S <= '1';
-                 Co <= '1';
-              when others =>
-                 S <= '0';
-                 Co <= '0';
+              when "000" => S <= '0'; Co <= '0';
+              when "001" => S <= '1'; Co <= '0';
+              when "010" => S <= '1'; Co <= '0';
+              when "011" => S <= '0'; Co <= '1';
+              when "100" => S <= '1'; Co <= '0';
+              when "101" => S <= '0'; Co <= '1';
+              when "110" => S <= '0'; Co <= '1';
+              when "111" => S <= '1'; Co <= '1';
+              when others => S <= '0'; Co <= '1';
            end case;
       end process;
 

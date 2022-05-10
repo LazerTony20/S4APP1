@@ -41,11 +41,11 @@ ARCHITECTURE behavioral OF Top_tb IS
     -- distincts avec leurs PORT MAP respectif. 
 
 component Add4bits is
-    Port ( X : in STD_LOGIC_vector(3 downto 0);
-           Y : in STD_LOGIC_vector(3 downto 0);
-           Ci : in STD_LOGIC;
-           S : out STD_LOGIC_vector(3 downto 0);
-           Co : out STD_LOGIC);
+    Port ( X4bit : in STD_LOGIC_vector(3 downto 0);
+           Y4bit : in STD_LOGIC_vector(3 downto 0);
+           Ci4bit : in STD_LOGIC;
+           S4bit : out STD_LOGIC_vector(3 downto 0);
+           Co4bit : out STD_LOGIC);
 end component;
    
 --> Générez des signaux internes au test bench avec des noms associés et les même types que dans le port
@@ -79,11 +79,11 @@ BEGIN
   -- Si on simule deux composantes, on pourrait avoir UUT1, UUT2 par exemple
   
   UUT: Add4bits PORT MAP(
-      X => X_sim, 
-      Y => Y_sim, 
-      S => S_sim, 
-      Ci => Ci_sim,
-      Co => Co_sim
+      X4bit => X_sim, 
+      Y4bit => Y_sim, 
+      S4bit => S_sim, 
+      Ci4bit => Ci_sim,
+      Co4bit => Co_sim
    );
 
  --> on assigne les signaux du vecteur de test vers les signaux connectés au port map. 
@@ -91,38 +91,17 @@ X_sim <= vect_test(3 downto 0);
 Y_sim <= vect_test(7 downto 4);
 Ci_sim <= vect_test(8);
  
--- *** Test Bench - User Defined Section ***
--- l'intérêt de cette structure de test bench est que l'on recopie la table de vérité.
 
    tb : PROCESS
    BEGIN
-         wait for PERIOD; vect_test <="000";   --> Remarquez que "vect_test" contient exactement la table de vérité.  
-         wait for PERIOD; vect_test <="001";   --> Avec cette façon, on s'assure de ne pas manquer de cas
-         wait for PERIOD; vect_test <="010";
-         wait for PERIOD; vect_test <="011";
-         wait for PERIOD; vect_test <="100";
-         wait for PERIOD; vect_test <="101";
-         wait for PERIOD; vect_test <="110";
-         wait for PERIOD; vect_test <="111";
-         
-       --> Cette partie est un exemple pour simuler le thermométrique
---         wait for PERIOD; Thermometrique <="000000000000"; --> Code normal
---         wait for PERIOD; Thermometrique <="000000000001";
---         wait for PERIOD; Thermometrique <="000000000011";
---         wait for PERIOD; Thermometrique <="000000000111";
---         wait for PERIOD; Thermometrique <="000000001111";
---         wait for PERIOD; Thermometrique <="000000011111";
---         wait for PERIOD; Thermometrique <="000000111111";
---         wait for PERIOD; Thermometrique <="000001111111";
---         wait for PERIOD; Thermometrique <="000011111111";
---         wait for PERIOD; Thermometrique <="000111111111";
---         wait for PERIOD; Thermometrique <="001111111111";
---         wait for PERIOD; Thermometrique <="011111111111";
---         wait for PERIOD; Thermometrique <="111111111111";
---         wait for PERIOD; Thermometrique <="000000000010";  --> Code avec erreur
---         wait for PERIOD; Thermometrique <="000000101111";
---         wait for PERIOD; Thermometrique <="111100001111";
-                  
+         wait for PERIOD; vect_test <="000000000";   --> Remarquez que "vect_test" contient exactement la table de vérité.  
+         wait for PERIOD; vect_test <="000000001";   --> Avec cette façon, on s'assure de ne pas manquer de cas
+         wait for PERIOD; vect_test <="001000010";
+         wait for PERIOD; vect_test <="000100011";
+         wait for PERIOD; vect_test <="000010100";
+         wait for PERIOD; vect_test <="000000101";
+         wait for PERIOD; vect_test <="011100110";
+         wait for PERIOD; vect_test <="001110111";                  
          WAIT; -- will wait forever
    END PROCESS;
 END;

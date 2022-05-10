@@ -40,11 +40,14 @@ entity Add1bitB is
 end Add1bitB;
 
 architecture Behavioral of Add1bitB is
+
+    signal math : std_logic_vector(2 downto 0);
+
   begin
   process(X, Y, Ci)
     begin
     S <= X XOR Y XOR Ci;
-    Co <= (Y AND Ci) OR (X AND Ci) OR (X AND Y);
+    Co <= (X AND Y) OR (X AND Ci) OR (Y AND Ci);
         
   end process;    
   
