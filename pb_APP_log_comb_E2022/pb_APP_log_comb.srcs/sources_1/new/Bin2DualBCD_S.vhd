@@ -47,46 +47,51 @@ end component;
 
 begin
 
---process(ADCbin)
---begin
---   case (Moins5) is
---      when "0000" =>
---         <statement>;
---      when "0001" =>
---         <statement>;
---      when "0010" =>
---         <statement>;
---      when "0011" =>
---         <statement>;
---      when "0100" =>
---         <statement>;
---      when "0101" =>
---         <statement>;
---      when "0110" =>
---         <statement>;
---      when "0111" =>
---         <statement>;
---      when "1000" =>
---         <statement>;
---      when "1001" =>
---         <statement>;
---      when "1010" =>
---         <statement>;
---      when "1011" =>
---         <statement>;
---      when "1100" =>
---         <statement>;
---      when "1101" =>
---         <statement>;
---      when "1110" =>
---         <statement>;
---      when "1111" =>
---         <statement>;
---      when others =>
---         <statement>;
---   end case;
+process(Moins5)
+begin
+   case (Moins5) is
+      when "0000" =>
+         Unite_s <= "0000";
+         Code_signe <= "1111";
+      when "0001" =>
+         Unite_s <= "0001";
+         Code_signe <= "1111";
+      when "0010" =>
+         Unite_s <= "0010";
+         Code_signe <= "1111";
+      when "0011" =>
+         Unite_s <= "0011";
+         Code_signe <= "1111";
+      when "0100" =>
+         Unite_s <= "0100";
+         Code_signe <= "1111";
+      when "0101" =>
+         Unite_s <= "0101";
+         Code_signe <= "1111";
+      when "0110" =>
+         Unite_s <= "0110";
+         Code_signe <= "1111";
+      when "1011" =>
+        Unite_s <= "0101";
+        Code_signe <= "1101";
+      when "1100" =>
+        Unite_s <= "0100";
+        Code_signe <= "1101";
+      when "1101" =>
+        Unite_s <= "0011";
+        Code_signe <= "1101";
+      when "1110" =>
+        Unite_s <= "0010";
+        Code_signe <= "1101";
+      when "1111" =>
+        Unite_s <= "0001";
+        Code_signe <= "1101";
+      when others =>
+        Unite_s <= "1011";--message erreur
+        Code_signe <= "1110";--message erreur
+   end case;
 				
---end process;
+end process;
 				
 
 end Behavioral;

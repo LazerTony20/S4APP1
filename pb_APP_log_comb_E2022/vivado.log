@@ -2,163 +2,25 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May 10 09:41:20 2022
-# Process ID: 18504
+# Start of session at: Tue May 10 11:19:44 2022
+# Process ID: 4108
 # Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10464 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16128 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
 # Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
 # Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
-INFO: [Project 1-313] Project file moved from '/mnt/home/gegi/usager/berb0401/Bureau/App1S4/AAC/S4APP1-main/pb_APP_log_comb_E2022' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:20 ; elapsed = 00:00:08 . Memory (MB): peak = 1108.613 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 1095.566 ; gain = 0.000
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd
-set_property top Parite_tb [get_filesets sim_1]
-set_property top_lib xil_defaultlib [get_filesets sim_1]
-set_property top Parite [current_fileset]
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'Parite_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj Parite_tb_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'septSegments_encodeur'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'septSegments_refreshPmod'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'septSegments_Top'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'synchro_module_v2'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/AppCombi_top.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'AppCombi_top'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Add4bits'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Add1bitA'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Add1bitB'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Decodeur3_8'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Fct2_3'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD_ns.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'BIN2DualBCD_ns'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD.vhd" into library xil_defaultlib
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Moins_5.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Moins_5'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Bouton2Bin'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bin2DualBCD_S.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Bin2DualBCD_S'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Parite'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'AppCombi_top_tb'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBenchAdd4bits.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Add4bits'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Fct2_3.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Fct2_3'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Moins_5.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Moins_5'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_BIN2DualBCD_ns'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bin2DualBCD_S'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Decodeur3_8.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Decodeur3_8'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bouton2Bin'
-INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'Parite_tb'
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1108.613 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '6' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Parite_tb_behav xil_defaultlib.Parite_tb -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Parite_tb_behav xil_defaultlib.Parite_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling architecture behavioral of entity xil_defaultlib.Parite [parite_default]
-Compiling architecture behavioral of entity xil_defaultlib.parite_tb
-Built simulation snapshot Parite_tb_behav
-INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "Parite_tb_behav -key {Behavioral:sim_1:Functional:Parite_tb} -tclbatch {Parite_tb.tcl} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-source Parite_tb.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'Parite_tb_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:10 ; elapsed = 00:00:15 . Memory (MB): peak = 1108.613 ; gain = 0.000
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [SIM-utils-54] Inspecting design source files for 'Parite_tb' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
-INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-"xvhdl --incr --relax -prj Parite_tb_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
-"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Parite_tb_behav xil_defaultlib.Parite_tb -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot Parite_tb_behav xil_defaultlib.Parite_tb -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
-Vivado Simulator 2020.2
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:09 . Memory (MB): peak = 1108.613 ; gain = 0.000
-run all
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+add_files -fileset sim_1 -norecurse {C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd}
+WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd' cannot be added to the project because it already exists in the project, skipping this file
+WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd' cannot be added to the project because it already exists in the project, skipping this file
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 10 11:17:23 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue May 10 11:31:18 2022...

@@ -79,7 +79,7 @@ begin
       when "1011" =>
          Dizaines <= "0001";
          Unites_ns <= "0001";
-      when "1100" =>    --Ã  partir d'ici, on est en dehors de la range dynamique
+      when "1100" =>    --à partir d'ici, on est en dehors de la range dynamique
          Dizaines <= "0000";
          Unites_ns <= "0000";
       when "1101" =>

@@ -49,25 +49,42 @@ end Bouton2Bin;
 
 architecture Behavioral of Bouton2Bin is
 
-Signal EN : STD_LOGIC_VECTOR(3 downto 0);
+Signal EN : STD_LOGIC_VECTOR(2 downto 0);
 begin
 
---process(BTN, S1, S2)
---begin
+process(BTN, S2)
+begin
 
---   EN(3) <= BTN(1);
---           EN(2) <= BTN(0);
---           EN(1) <= S1;
---           EN(0) <= S0;
+   EN(0) <= BTN(0);
+   EN(1) <= BTN(1);
+   EN(2) <= S2;
+   --EN(3) <= S1; mais pas a soccuper de la parite ici normalement
 
---     if <condition> then
---          <statement>
---       elsif <condition> then
---          <statement>
---       else
---          <statement>
---       end if;
+     if EN = "000" then
+         DAFF1 <= Dizaines;
+         DAFF0 <= Unites_ns;
+         elsif EN = "001" then
+          DAFF1 <= Dizaines;
+          DAFF0 <= Unites_ns;
+          elsif EN = "010" then
+          DAFF1 <= Code_signe;
+          DAFF0 <= Unites_s;
+          elsif EN = "011" then --code erreur
+          DAFF1 <= "1110";
+          DAFF0 <= "1011";
+       elsif EN = "100" then    --code erreur
+          DAFF1 <= "1110";
+          DAFF0 <= "1011";
+       elsif EN = "101" then    --code erreur
+          DAFF1 <= "1110";
+          DAFF0 <= "1011";
+          
+       else   --code erreur donc pas nécessaire de faire toutes les possibilités avec le MSB a 1 (Er)
+          DAFF1 <= "1110";
+          DAFF0 <= "1011";
 
---end process;
+       end if;
+
+end process;
 
 end Behavioral;

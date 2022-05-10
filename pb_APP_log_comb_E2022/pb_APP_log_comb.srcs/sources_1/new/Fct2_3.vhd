@@ -33,7 +33,7 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity Fct2_3 is
     Port ( ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
-           A2_3 : out STD_LOGIC_VECTOR (3 downto 0));
+           A2_3 : out STD_LOGIC_VECTOR (2 downto 0));
 end Fct2_3;
 
 architecture Behavioral of Fct2_3 is
@@ -66,8 +66,10 @@ Port map (
     Y4bit(1) => '0',
     Y4bit(2) => '0',
     Y4bit(3) => '0',
-    Ci4bit => '0',
-    S4bit => A2_3
+    Ci4bit   => '0',
+    S4bit(0) => A2_3(0),
+    S4bit(1) => A2_3(1),
+    S4bit(2) => A2_3(2)
 );
 --    end process Inst_Fct2_3;
     
