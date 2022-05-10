@@ -39,23 +39,17 @@ end Fct2_3;
 architecture Behavioral of Fct2_3 is
 
 component Add4bits is
-    Port ( X4bit : in STD_LOGIC_vector(3 downto 0);
-           Y4bit : in STD_LOGIC_vector(3 downto 0);
+    Port ( X4bit  : in STD_LOGIC_vector(3 downto 0);
+           Y4bit  : in STD_LOGIC_vector(3 downto 0);
            Ci4bit : in STD_LOGIC;
-           S4bit : out STD_LOGIC_vector(3 downto 0);
+           S4bit  : out STD_LOGIC_vector(3 downto 0);
            Co4bit : out STD_LOGIC);
 end component;
 
-signal InputNumber : STD_LOGIC_VECTOR (3 downto 0);
+signal nul : std_logic;
 
 begin
 
---Inst_Fct2_3 : process (Add4bits)
---    begin
---    InputNumber(0) <= ADCbin(1);
---    InputNumber(1) <= ADCbin(2);
---    InputNumber(2) <= ADCbin(3);
---    InputNumber(3) <= '0';
 Inst_Fct2_3 : Add4bits
 Port map (
     X4bit(0) => ADCbin(1),
@@ -69,8 +63,8 @@ Port map (
     Ci4bit   => '0',
     S4bit(0) => A2_3(0),
     S4bit(1) => A2_3(1),
-    S4bit(2) => A2_3(2)
+    S4bit(2) => A2_3(2),
+    S4bit(3) => nul
 );
---    end process Inst_Fct2_3;
     
-    end Behavioral;
+end Behavioral;

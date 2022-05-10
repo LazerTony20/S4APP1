@@ -2,10 +2,10 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May 10 11:19:44 2022
-# Process ID: 4108
+# Start of session at: Tue May 10 11:31:49 2022
+# Process ID: 18740
 # Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent16128 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11364 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
 # Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
 # Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
 #-----------------------------------------------------------
@@ -16,11 +16,240 @@ Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:19 ; elapsed = 00:00:08 . Memory (MB): peak = 1095.566 ; gain = 0.000
+open_project: Time (s): cpu = 00:00:18 ; elapsed = 00:00:08 . Memory (MB): peak = 1095.125 ; gain = 0.000
+set_property top Fct2_3 [current_fileset]
+set_property top TestBench_Fct2_3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TestBench_Fct2_3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TestBench_Fct2_3_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'septSegments_encodeur'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'septSegments_refreshPmod'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'septSegments_Top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'synchro_module_v2'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/imports/src/AppCombi_top.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AppCombi_top'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Add4bits'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Add1bitA'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Add1bitB'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Decodeur3_8'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Fct2_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD_ns.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BIN2DualBCD_ns'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'BIN2DualBCD'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Moins_5.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Moins_5'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Bouton2Bin'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bin2DualBCD_S.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Bin2DualBCD_S'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Parite'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'AppCombi_top_tb'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBenchAdd4bits.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Add4bits'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Fct2_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Fct2_3'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Moins_5.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Moins_5'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_BIN2DualBCD_ns'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bin2DualBCD_S'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Decodeur3_8.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Decodeur3_8'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bouton2Bin'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Parite_tb'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3599] not all partial formals of 's4bit' have actual [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd:61]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbench_fct2_3 in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:02 ; elapsed = 00:00:07 . Memory (MB): peak = 1095.125 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TestBench_Fct2_3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TestBench_Fct2_3_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Bouton2Bin'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Bin2DualBCD_S.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Bin2DualBCD_S'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Parite.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Parite'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_BIN2DualBCD_ns'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bin2DualBCD_S'
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'TestBench_Bouton2Bin'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3599] not all partial formals of 's4bit' have actual [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd:61]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbench_fct2_3 in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '3' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 1095.125 ; gain = 0.000
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TestBench_Fct2_3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TestBench_Fct2_3_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Fct2_3'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+ERROR: [VRFC 10-3599] not all partial formals of 's4bit' have actual [C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd:53]
+ERROR: [XSIM 43-3321] Static elaboration of top level VHDL design unit testbench_fct2_3 in library work failed.
+INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
+INFO: [USF-XSim-99] Step results log file:'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+Command: launch_simulation 
+INFO: [Vivado 12-5682] Launching behavioral simulation in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [SIM-utils-54] Inspecting design source files for 'TestBench_Fct2_3' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-100] Fetching design files from 'sources_1'...(this may take a while)...
+INFO: [USF-XSim-101] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xvhdl --incr --relax -prj TestBench_Fct2_3_vhdl.prj"
+INFO: [VRFC 10-163] Analyzing VHDL file "C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'Fct2_3'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+"xelab -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log"
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: C:/Xilinx/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 6e88f38826214958bd01804f64fad5de --incr --debug typical --relax --mt 2 -L xil_defaultlib -L secureip --snapshot TestBench_Fct2_3_behav xil_defaultlib.TestBench_Fct2_3 -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling architecture behavioral of entity xil_defaultlib.Add1bitA [add1bita_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add1bitB [add1bitb_default]
+Compiling architecture behavioral of entity xil_defaultlib.Add4bits [add4bits_default]
+Compiling architecture behavioral of entity xil_defaultlib.Fct2_3 [fct2_3_default]
+Compiling architecture behavioral of entity xil_defaultlib.testbench_fct2_3
+Built simulation snapshot TestBench_Fct2_3_behav
+
+****** Webtalk v2020.2 (64-bit)
+  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+source C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/TestBench_Fct2_3_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue May 10 11:45:13 2022...
+run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1095.125 ; gain = 0.000
+INFO: [USF-XSim-69] 'elaborate' step finished in '5' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "TestBench_Fct2_3_behav -key {Behavioral:sim_1:Functional:TestBench_Fct2_3} -tclbatch {TestBench_Fct2_3.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+source TestBench_Fct2_3.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'TestBench_Fct2_3_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:08 ; elapsed = 00:00:11 . Memory (MB): peak = 1095.125 ; gain = 0.000
+run all
+close [ open C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd w ]
+add_files C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd
+close [ open C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/CheckErr4bits.vhd w ]
+add_files C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/CheckErr4bits.vhd
+close [ open C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Calculnb1sur4bit.vhd w ]
+add_files C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Calculnb1sur4bit.vhd
+close [ open C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Segmentation12bits.vhd w ]
+add_files C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sources_1/new/Segmentation12bits.vhd
 set_property SOURCE_SET sources_1 [get_filesets sim_1]
-add_files -fileset sim_1 -norecurse {C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd}
-WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd' cannot be added to the project because it already exists in the project, skipping this file
-WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd' cannot be added to the project because it already exists in the project, skipping this file
-WARNING: [filemgmt 56-12] File 'C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd' cannot be added to the project because it already exists in the project, skipping this file
+add_files -fileset sim_1 -norecurse C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.srcs/sim_1/new/TestBench_Thermo2Bin.vhd
+set_property top TestBench_Thermo2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+set_property top Thermo2Bin [current_fileset]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
 exit
-INFO: [Common 17-206] Exiting Vivado at Tue May 10 11:31:18 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue May 10 13:40:32 2022...

@@ -1,0 +1,36 @@
+# compile vhdl design source files
+vhdl2008 xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_encodeur.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_refreshPmod.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/septSegments_Top.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/synchro_module_v2.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/imports/src/AppCombi_top.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add4bits.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitA.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Add1bitB.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Decodeur3_8.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Fct2_3.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD_ns.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/BIN2DualBCD.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Moins_5.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Bin2DualBCD_S.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Parite.vhd" \
+
+vhdl2008 xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBenchAdd4bits.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Fct2_3.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Moins_5.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Decodeur3_8.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd" \
+
+# Do not sort compile order
+nosort
