@@ -40,11 +40,16 @@ end Parite;
 
 architecture Behavioral of Parite is
 
-signal pout : std_logic;
+--signal pout : std_logic;
 
 begin
 process(ADCbin, S1)
     begin
+    case S1 is
+        when '0' => parite <= ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
+        when '1' => parite <= not ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
+        when others => parite <= '0';
+    end case;
 --    case ADCbin is
 --        when "0000" => pout <= '0';
 --        when "0001" => pout <= '1';
@@ -70,9 +75,9 @@ process(ADCbin, S1)
 --        when others => parite <= '0';
 --    end case;
 --Inversion de l'affichage de parté si l'interrupteur S1 est activé.
-        pout <= ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
+--        pout <= ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
 --      parite <= S1 XOR ((ADCbin(0) XOR ADCbin(1)) XOR(ADCbin(2) XOR ADCbin(3)));
-      parite <= S1 XOR pout;
+--      parite <= S1 XOR pout;
 end process;
 
 end Behavioral;
