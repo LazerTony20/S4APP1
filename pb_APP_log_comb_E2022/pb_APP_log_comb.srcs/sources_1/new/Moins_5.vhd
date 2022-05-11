@@ -39,11 +39,11 @@ end Moins_5;
 architecture Behavioral of Moins_5 is
 
 component Add4bits is
-    Port ( X : in STD_LOGIC_vector(3 downto 0);
-           Y : in STD_LOGIC_vector(3 downto 0);
-           Ci : in STD_LOGIC;
-           S : out STD_LOGIC_vector(3 downto 0);
-           Co : out STD_LOGIC);
+    Port ( X4bit : in STD_LOGIC_vector(3 downto 0);
+           Y4bit : in STD_LOGIC_vector(3 downto 0);
+           Ci4bit : in STD_LOGIC;
+           S4bit : out STD_LOGIC_vector(3 downto 0);
+           Co4bit : out STD_LOGIC);
 end component;
 
 --Signal Sum_2s_complement : STD_LOGIC_VECTOR(3 downto 0);
@@ -54,10 +54,10 @@ begin
 
     Calcul_Moins5 : Add4bits
     Port map (
-               Ci => '0',
-               X => "1011",
-               Y => ADCbin,
-               S => Moins5
+               Ci4bit => '0',
+               X4bit => "1011",
+               Y4bit => ADCbin,
+               S4bit => Moins5
            );
            
 --     Calcul_Plus1 : Add4bits

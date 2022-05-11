@@ -45,15 +45,19 @@ process(In4bit)
     begin
     case previousHasZeros is
         when '0' =>
-        erreur <= ((In4bit(3)AND NOT In4bit(2)) OR (In4bit(2) AND NOT In4bit(1)) OR (In4bit(1) AND NOT In4bit(0)));
         if In4bit = "1111" then
 	       hasZeros <= '0';
+	       erreur <= '0';
         else
 	       hasZeros <= '1';
+	       erreur <= (((In4bit(3))AND (NOT In4bit(2))) OR ((In4bit(2)) AND (NOT In4bit(1))) OR ((In4bit(1)) AND (NOT In4bit(0))));
+	       
         end if;
         when '1' =>
             if In4bit /= "0000" then
                 erreur <= '1';
+            else
+                erreur <= '0';
             end if;
         when others => erreur <= '1';
     end case;

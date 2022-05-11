@@ -1,0 +1,25 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 10 23:34:17 2022
+# Process ID: 7212
+# Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13016 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
+# Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
+launch_simulation
+source AppCombi_top_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/AppCombi_top_tb/uut/inst_aff/o_AFFSSD_Sim}} 
+relaunch_sim
+restart
+relaunch_sim
+restart
+relaunch_sim
+close_sim
+launch_simulation
+close_project

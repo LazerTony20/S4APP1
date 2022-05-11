@@ -2,12 +2,157 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May 10 23:34:17 2022
-# Process ID: 7212
+# Start of session at: Wed May 11 00:29:46 2022
+# Process ID: 12096
 # Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent13016 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4340 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
 # Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
 # Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
+launch_simulation
+launch_simulation
+source AppCombi_top_tb.tcl
+current_wave_config {Untitled 1}
+add_wave {{/AppCombi_top_tb/uut/inst_aff/o_AFFSSD_Sim}} 
+relaunch_sim
+close_sim
+launch_simulation
+launch_simulation
+source AppCombi_top_tb.tcl
+current_wave_config {Untitled 2}
+add_wave {{/AppCombi_top_tb/uut/inst_aff/o_AFFSSD_Sim}} 
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Thermo2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Thermo2Bin [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_Thermo2Bin.tcl
+run all
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 3}
+add_wave {{/TestBench_Thermo2Bin/UUT/inst_nb1pack1/erreur}} 
+relaunch_sim
+close_sim
+launch_simulation
+source TestBench_Thermo2Bin.tcl
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+relaunch_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Decodeur3_8 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Decodeur3_8 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+relaunch_sim
+close_sim
+launch_simulation
+source TestBench_Decodeur3_8.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Parite_tb [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Parite [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source Parite_tb.tcl
+run all
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Fct2_3 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Fct2_3 [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_Fct2_3.tcl
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Bouton2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Bouton2Bin [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TestBench_Bouton2Bin.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Moins_5 [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_Moins_5.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Bin2DualBCD_S [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_Bin2DualBCD_S.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_BIN2DualBCD_ns [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_BIN2DualBCD_ns.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Thermo2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+close_sim
+launch_simulation
+source TestBench_Thermo2Bin.tcl
+close_sim

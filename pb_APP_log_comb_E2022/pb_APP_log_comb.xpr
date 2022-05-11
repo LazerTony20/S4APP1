@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="/mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr">
+<Project Version="7" Minor="54" Path="C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="6e88f38826214958bd01804f64fad5de"/>
@@ -50,7 +50,7 @@
     <Option Name="DSABoardId" Val="zybo-z7-10"/>
     <Option Name="DSADescription" Val="Vivado generated DSA"/>
     <Option Name="DSAEmuDir" Val="emu"/>
-    <Option Name="WTXSimLaunchSim" Val="288"/>
+    <Option Name="WTXSimLaunchSim" Val="346"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -211,7 +211,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="AppCombi_top"/>
+        <Option Name="TopModule" Val="Bouton2Bin"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -300,7 +300,7 @@
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="AppCombi_top_tb"/>
+        <Option Name="TopModule" Val="TestBench_Thermo2Bin"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -330,32 +330,30 @@
     <Simulator Name="Questa">
       <Option Name="Description" Val="Questa Advanced Simulator"/>
     </Simulator>
-    <Simulator Name="IES">
-      <Option Name="Description" Val="Incisive Enterprise Simulator (IES)"/>
-    </Simulator>
-    <Simulator Name="Xcelium">
-      <Option Name="Description" Val="Xcelium Parallel Simulator"/>
-    </Simulator>
-    <Simulator Name="VCS">
-      <Option Name="Description" Val="Verilog Compiler Simulator (VCS)"/>
-    </Simulator>
     <Simulator Name="Riviera">
       <Option Name="Description" Val="Riviera-PRO Simulator"/>
     </Simulator>
+    <Simulator Name="ActiveHDL">
+      <Option Name="Description" Val="Active-HDL Simulator"/>
+    </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../C:/mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/Users/tetm2701/Documents/Repos/git_Departement/Enseignement/APP_LogiqueCombi/Vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../../mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/Users/tetm2701/Documents/Repos/git_Departement/Enseignement/APP_LogiqueCombi/Vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+          <Desc>Vivado Synthesis Defaults</Desc>
+        </StratHandle>
         <Step Id="synth_design"/>
       </Strategy>
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../C:/mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/Users/tetm2701/Documents/Repos/git_Departement/Enseignement/APP_LogiqueCombi/Vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../../mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/mnt/home/gegi/usager/berb0401/C:/Users/tetm2701/Documents/Repos/git_Departement/Enseignement/APP_LogiqueCombi/Vivado/pb_APP_log_comb/pb_APP_log_comb.srcs/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+          <Desc>Default settings for Implementation.</Desc>
+        </StratHandle>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>

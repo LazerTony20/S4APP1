@@ -77,18 +77,18 @@ COMPONENT AppCombi_top
      );    
 end COMPONENT;
    SIGNAL ADCth_sim         :  STD_LOGIC_VECTOR(11 downto 0);
-   SIGNAL BTN_sim       :  STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
-   SIGNAL S1_sim        :  STD_LOGIC := '0';
-   SIGNAL S2_sim        :  STD_LOGIC := '0';
-   signal clk_sim       :  STD_LOGIC := '0';
-   signal pmodled_sim   :  STD_LOGIC_VECTOR (7 DOWNTO 0);
-   signal o_DEL2_sim       :  STD_LOGIC := '0';
-   signal o_DEL1_sim    :  STD_LOGIC := '0';
-   signal SSD_sim       :  STD_LOGIC_VECTOR (7 DOWNTO 0) := "00000000";
-   signal sw_sim        :  STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
-   signal cin_sim       :  STD_LOGIC := '0';
-   signal vecteur_test_sim   :  STD_LOGIC_VECTOR (17 DOWNTO 0) := (others => '0');
-   signal resultat_attendu       :  STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000";
+   SIGNAL BTN_sim           :  STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
+   SIGNAL S1_sim            :  STD_LOGIC := '0';
+   SIGNAL S2_sim            :  STD_LOGIC := '0';
+   signal clk_sim           :  STD_LOGIC := '0';
+   signal pmodled_sim       :  STD_LOGIC_VECTOR (7 DOWNTO 0);
+   signal o_DEL2_sim        :  STD_LOGIC := '0';
+   signal o_DEL1_sim        :  STD_LOGIC := '0';
+   signal SSD_sim           :  STD_LOGIC_VECTOR (7 DOWNTO 0) := "00000000";
+   signal sw_sim            :  STD_LOGIC_VECTOR (3 DOWNTO 0) := "0000";
+   signal cin_sim           :  STD_LOGIC := '0';
+   signal vecteur_test_sim  :  STD_LOGIC_VECTOR (17 DOWNTO 0) := (others => '0');
+   signal resultat_attendu  :  STD_LOGIC_VECTOR (4 DOWNTO 0) := "00000";
 
 
    constant sysclk_Period  : time := 8 ns;
@@ -98,7 +98,7 @@ end COMPONENT;
 ----------------------------------------------------------------------------
 -- declaration d'un tableau pour soumettre un vecteur de test  
 ----------------------------------------------------------------------------  
- type table_valeurs_tests is array (integer range 0 to 12) of std_logic_vector(17 downto 0);
+ type table_valeurs_tests is array (integer range 0 to 96) of std_logic_vector(17 downto 0);
     constant mem_valeurs_tests : table_valeurs_tests := 
     ( 
 --  --  vecteur de test ï¿½ modifier selon les besoins
@@ -110,7 +110,23 @@ end COMPONENT;
 --    -- conserver la ligne ci-bas.
 --    others => "00000" & "0000" & "0000" & '0'  --  0 + 0 
 
+------S2----S1---BTN(3:0)------ADCth-------
+--   "0" & "0" & "0000" & "000000000000",
+--   "0" & "0" & "0000" & "000000000001",
+--   "0" & "0" & "0000" & "000000000011",
+--   "0" & "0" & "0000" & "000000000111",
+--   "0" & "0" & "0000" & "000000001111",
+--   "0" & "0" & "0000" & "000000011111",
+--   "0" & "0" & "0000" & "000000111111",
+--   "0" & "0" & "0000" & "000001111111",
+--   "0" & "0" & "0000" & "000011111111",
+--   "0" & "0" & "0000" & "000111111111",
+--   "0" & "0" & "0000" & "001111111111",
+--   "0" & "0" & "0000" & "011111111111",
+--   "0" & "0" & "0000" & "111111111111"
+--    );
 --  ----ADCth-------BTN(3:0)---S1----S2--
+--Test 1    Segments BCD non signé 0 a 12
     "000000000000"  & "0000" & "0" & "0",
     "000000000001"  & "0000" & "0" & "0",
     "000000000011"  & "0000" & "0" & "0",
@@ -123,7 +139,103 @@ end COMPONENT;
     "000111111111"  & "0000" & "0" & "0",
     "001111111111"  & "0000" & "0" & "0",
     "011111111111"  & "0000" & "0" & "0",
-    "111111111111"  & "0000" & "0" & "0"
+    "111111111111"  & "0000" & "0" & "0",
+    -----------------------------------------
+--Test 2    Segement BCD hexa 0 a 12
+    "000000000000"  & "0001" & "0" & "0",
+    "000000000001"  & "0001" & "0" & "0",
+    "000000000011"  & "0001" & "0" & "0",
+    "000000000111"  & "0001" & "0" & "0",
+    "000000001111"  & "0001" & "0" & "0",
+    "000000011111"  & "0001" & "0" & "0",
+    "000000111111"  & "0001" & "0" & "0",
+    "000001111111"  & "0001" & "0" & "0",
+    "000011111111"  & "0001" & "0" & "0",
+    "000111111111"  & "0001" & "0" & "0",
+    "001111111111"  & "0001" & "0" & "0",
+    "011111111111"  & "0001" & "0" & "0",
+    "111111111111"  & "0001" & "0" & "0",
+    ------------------------------------------
+--Test 3    Segment BCD signé -5 a 6
+    "000000000000"  & "0010" & "0" & "0",
+    "000000000001"  & "0010" & "0" & "0",
+    "000000000011"  & "0010" & "0" & "0",
+    "000000000111"  & "0010" & "0" & "0",
+    "000000001111"  & "0010" & "0" & "0",
+    "000000011111"  & "0010" & "0" & "0",
+    "000000111111"  & "0010" & "0" & "0",
+    "000001111111"  & "0010" & "0" & "0",
+    "000011111111"  & "0010" & "0" & "0",
+    "000111111111"  & "0010" & "0" & "0",
+    "001111111111"  & "0010" & "0" & "0",
+    "011111111111"  & "0010" & "0" & "0",
+    "111111111111"  & "0010" & "0" & "0",
+--Test 4    Led(8:0) allument en ordre avec ADCth qui augmente en ordre aussi
+    "000000000000"  & "0000" & "0" & "0",
+    "000000000001"  & "0000" & "0" & "0",
+    "000000000011"  & "0000" & "0" & "0",
+    "000000000111"  & "0000" & "0" & "0",
+    "000000001111"  & "0000" & "0" & "0",
+    "000000011111"  & "0000" & "0" & "0",
+    "000000111111"  & "0000" & "0" & "0",
+    "000001111111"  & "0000" & "0" & "0",
+    "000011111111"  & "0000" & "0" & "0",
+    "000111111111"  & "0000" & "0" & "0",
+    "001111111111"  & "0000" & "0" & "0",
+    "011111111111"  & "0000" & "0" & "0",
+    "111111111111"  & "0000" & "0" & "0",
+    --Test 5    Led2 pour parite avec S1 = 0
+    "000000000000"  & "0000" & "0" & "0",
+    "000000000001"  & "0000" & "0" & "0",
+    "000000000011"  & "0000" & "0" & "0",
+    "000000000111"  & "0000" & "0" & "0",
+    "000000001111"  & "0000" & "0" & "0",
+    "000000011111"  & "0000" & "0" & "0",
+    "000000111111"  & "0000" & "0" & "0",
+    "000001111111"  & "0000" & "0" & "0",
+    "000011111111"  & "0000" & "0" & "0",
+    "000111111111"  & "0000" & "0" & "0",
+    "001111111111"  & "0000" & "0" & "0",
+    "011111111111"  & "0000" & "0" & "0",
+    "111111111111"  & "0000" & "0" & "0",
+    --Test 6    Led2 pour parite avec S1 = 1
+    "000000000000"  & "0000" & "1" & "0",
+    "000000000001"  & "0000" & "1" & "0",
+    "000000000011"  & "0000" & "1" & "0",
+    "000000000111"  & "0000" & "1" & "0",
+    "000000001111"  & "0000" & "1" & "0",
+    "000000011111"  & "0000" & "1" & "0",
+    "000000111111"  & "0000" & "1" & "0",
+    "000001111111"  & "0000" & "1" & "0",
+    "000011111111"  & "0000" & "1" & "0",
+    "000111111111"  & "0000" & "1" & "0",
+    "001111111111"  & "0000" & "1" & "0",
+    "011111111111"  & "0000" & "1" & "0",
+    "111111111111"  & "0000" & "1" & "0",
+    --Test 7    Message "Er" sur Segment 7 car BTN 0 et 1 = 1
+    "000000000000"  & "0011" & "0" & "0",
+    "000000000001"  & "0011" & "0" & "0",
+    "000000000011"  & "0011" & "0" & "0",
+    --Test 8    Message "Er" sur Segment 7 car S2 = 1
+    "000000000000"  & "0000" & "0" & "1",
+    "000000000001"  & "0000" & "0" & "1",
+    "000000000011"  & "0000" & "0" & "1",
+     --Test 9    Message "Er" sur Segment 7 car code ADCth invalide (premier est valide)
+    "111111111111"  & "0000" & "0" & "0",
+    "111111111110"  & "0000" & "0" & "0",
+    "111111111101"  & "0000" & "0" & "0",
+    "111111111011"  & "0000" & "0" & "0",
+    "111111110111"  & "0000" & "0" & "0",
+    "111111101111"  & "0000" & "0" & "0",
+    "111111011111"  & "0000" & "0" & "0",
+    "111110111111"  & "0000" & "0" & "0",
+    "111101111111"  & "0000" & "0" & "0",
+    "111011111111"  & "0000" & "0" & "0",
+    "110111111111"  & "0000" & "0" & "0",
+    "101111111111"  & "0000" & "0" & "0",
+    "011111111111"  & "0000" & "0" & "0"
+
+    
     );
 ----------------------------------------------------------------------------
 
@@ -133,16 +245,16 @@ begin
 -- Pattes du FPGA Zybo-Z7
 uut: AppCombi_top
    PORT MAP(
-   ADCth    =>  ADCth_sim,
-   BTN       =>   BTN_sim,
-   --i_sw        =>   sw_sim,
-   S1          =>   S1_sim,
+   ADCth        =>  ADCth_sim,
+   BTN          =>   BTN_sim,
+   --i_sw       =>   sw_sim,
+   S1           =>   S1_sim,
    S2           =>  S2_sim,
-   sysclk      =>   clk_sim,
-   o_SSD       =>   SSD_sim,
+   sysclk       =>   clk_sim,
+   o_SSD        =>   SSD_sim,
    o_DEL2       =>   o_DEL2_sim,
-   o_pmodled   =>   pmodled_sim,
-   o_DEL1    =>   o_DEL1_sim
+   o_pmodled    =>   pmodled_sim,
+   o_DEL1       =>   o_DEL1_sim
    );
    
 
@@ -175,17 +287,17 @@ uut: AppCombi_top
          -- simuler une sequence de valeurs a l'entree 
          for index in 0 to   mem_valeurs_tests'length-1 loop
               vecteur_test_sim <= mem_valeurs_tests(table_valeurs_adr);
-              ADCth_sim  <= vecteur_test_sim (11 downto 0);
-              BTN_sim    <= vecteur_test_sim (15 downto 12);
-              S1_sim     <= vecteur_test_sim (16);
-              S2_sim     <= vecteur_test_sim (17);
+              ADCth_sim  <= vecteur_test_sim (17 downto 6);
+              BTN_sim    <= vecteur_test_sim (5 downto 2);
+              S1_sim     <= vecteur_test_sim (1);
+              S2_sim     <= vecteur_test_sim (0);
 --              btn_sim <= vecteur_test_sim (4 downto 1) ;
 --              cin_sim <= vecteur_test_sim (0);
 --			  resultat_attendu <= vecteur_test_sim(13 downto 9);
               wait for delai_sim;
 			  --assert (resultat_attendu /= (probe_adder_result) ) report "Resultat pas celui prï¿½vu." severity warning; 
               table_valeurs_adr := table_valeurs_adr + 1;
-			  if(table_valeurs_adr = 12) then
+			  if(table_valeurs_adr = 96) then
 				exit;
 			  end if;
          end loop;

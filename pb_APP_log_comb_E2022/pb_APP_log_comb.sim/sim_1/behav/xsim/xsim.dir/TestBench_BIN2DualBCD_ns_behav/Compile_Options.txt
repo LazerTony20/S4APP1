@@ -1,0 +1,1 @@
+-wto "6e88f38826214958bd01804f64fad5de" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "TestBench_BIN2DualBCD_ns_behav" "xil_defaultlib.TestBench_BIN2DualBCD_ns" -log "elaborate.log" 

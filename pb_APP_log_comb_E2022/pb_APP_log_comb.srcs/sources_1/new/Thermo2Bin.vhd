@@ -65,11 +65,11 @@ component Segmentation12bits is
           );
 end component;
 
-component CheckErr4bit is
-    Port (  In4Bit : in STD_LOGIC_VECTOR (3 downto 0); 
-            previousHasZeros : in STD_LOGIC;
-            hasZeros : out STD_LOGIC;
-            erreur : out STD_LOGIC    
+component CheckErr4bits is
+    Port (  In4Bit              : in STD_LOGIC_VECTOR (3 downto 0); 
+            previousHasZeros    : in STD_LOGIC;
+            hasZeros            : out STD_LOGIC;
+            erreur              : out STD_LOGIC    
           );
 end component;
 
@@ -98,21 +98,21 @@ Port map (  In12Bit  => ADCth,
             out4bit3 => pack3
           );
 
-inst_Chk1stpack : CheckErr4bit
+inst_Chk1stpack : CheckErr4bits
 Port map (  In4Bit => pack3,
             previousHasZeros => '0',
             hasZeros => zeros1,
             erreur => err
          );
 
-inst_Chk2ndpack : CheckErr4bit
+inst_Chk2ndpack : CheckErr4bits
 Port map (  In4Bit => pack2,
             previousHasZeros => zeros1,
             hasZeros => zeros2,
             erreur => err
          );
 
-inst_Chk3rdpack : CheckErr4bit
+inst_Chk3rdpack : CheckErr4bits
 Port map (  In4Bit => pack1,
             previousHasZeros => zeros2,
             hasZeros => nul,
@@ -156,7 +156,7 @@ Port map(   X4bit   => sum12,
             S4bit(3)=> ADCbin(3)
         );
 
-process(err,ADCth)
+process(err)
     begin
     erreurT2B <= err;    
 end process;

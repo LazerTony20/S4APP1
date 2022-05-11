@@ -48,6 +48,8 @@ begin
 		"00010000" when "100",
 		"00100000" when "101",
 		"01000000" when "110",
-		"10000000" when "111";
+		"10000000" when "111",
+		"00000000" when others;
+		
 
 end Behavioral;
