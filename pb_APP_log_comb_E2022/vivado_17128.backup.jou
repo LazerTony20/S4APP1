@@ -1,0 +1,68 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 10 14:13:53 2022
+# Process ID: 17128
+# Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15104 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
+# Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Thermo2Bin [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Thermo2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TestBench_Thermo2Bin.tcl
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_CheckErr4bits [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top CheckErr4bits [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+restart
+relaunch_sim
+relaunch_sim
+relaunch_sim
+restart
+restart
+launch_simulation
+close_sim
+launch_simulation
+source TestBench_CheckErr4bits.tcl
+restart
+relaunch_sim
+run all
+close_sim
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top Thermo2Bin [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top TestBench_Thermo2Bin [get_filesets sim_1]
+set_property top_lib xil_defaultlib [get_filesets sim_1]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode DisplayOnly [current_project]
+launch_simulation
+source TestBench_Thermo2Bin.tcl
+restart
+relaunch_sim
+run all
+close_sim

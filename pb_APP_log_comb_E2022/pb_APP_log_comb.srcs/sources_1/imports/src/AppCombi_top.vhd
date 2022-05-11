@@ -1,21 +1,21 @@
 ---------------------------------------------------------------------------------------------
--- Université de Sherbrooke - Département de GEGI
+-- Universitï¿½ de Sherbrooke - Dï¿½partement de GEGI
 -- Version         : 3.0
 -- Nomenclature    : GRAMS
 -- Date            : 21 Avril 2020
--- Auteur(s)       : Réjean Fontaine, Daniel Dalle, Marc-André Tétrault
+-- Auteur(s)       : Rï¿½jean Fontaine, Daniel Dalle, Marc-Andrï¿½ Tï¿½trault
 -- Technologies    : FPGA Zynq (carte ZYBO Z7-10 ZYBO Z7-20)
 --                   peripheriques: Pmod8LD PmodSSD
 --
 -- Outils          : vivado 2019.1 64 bits
 ---------------------------------------------------------------------------------------------
 -- Description:
--- Circuit utilitaire pour le laboratoire et la problématique de logique combinatoire
+-- Circuit utilitaire pour le laboratoire et la problï¿½matique de logique combinatoire
 --
 ---------------------------------------------------------------------------------------------
--- À faire :
+-- ï¿½ faire :
 -- Voir le guide de l'APP
---    Insérer les modules additionneurs ("components" et "instances")
+--    Insï¿½rer les modules additionneurs ("components" et "instances")
 --
 ---------------------------------------------------------------------------------------------
 
@@ -27,13 +27,18 @@ use UNISIM.Vcomponents.ALL;
 
 entity AppCombi_top is
   port ( 
-          i_btn       : in    std_logic_vector (3 downto 0); -- Boutons de la carte Zybo
-          i_sw        : in    std_logic_vector (3 downto 0); -- Interrupteurs de la carte Zybo
+          ADCth    : in    STD_LOGIC_VECTOR(11 downto 0);
+          BTN       : in    std_logic_vector (3 downto 0); -- Boutons de la carte Zybo
+          --i_sw        : in    std_logic_vector (3 downto 0); -- Interrupteurs de la carte Zybo
+          S1          : in    STD_LOGIC;
+          S2          : in    STD_LOGIC;
           sysclk      : in    std_logic;                     -- horloge systeme
           o_SSD       : out   std_logic_vector (7 downto 0); -- vers cnnecteur pmod afficheur 7 segments
-          o_led       : out   std_logic_vector (3 downto 0); -- vers DELs de la carte Zybo
-          o_led6_r    : out   std_logic;                     -- vers DEL rouge de la carte Zybo
-          o_pmodled   : out   std_logic_vector (7 downto 0)  -- vers connecteur pmod 8 DELs
+          --o_led       : out   std_logic_vector (3 downto 0); -- vers DELs de la carte Zybo
+          --o_led6_r    : out   std_logic;                     -- vers DEL rouge de la carte Zybo
+          o_pmodled   : out   std_logic_vector (7 downto 0);  -- vers connecteur pmod 8 DELs
+          o_DEL2      : OUT   STD_LOGIC;    --del 2 thermo
+          o_DEL1      : OUT   STD_LOGIC    --del 1 thermo
           );
 end AppCombi_top;
  
@@ -58,7 +63,7 @@ architecture BEHAVIORAL of AppCombi_top is
  component synchro_module_v2 is
    generic (const_CLK_syst_MHz: integer := freq_sys_MHz);
       Port ( 
-           clkm        : in  STD_LOGIC;  -- Entrée  horloge maitre
+           clkm        : in  STD_LOGIC;  -- Entrï¿½e  horloge maitre
            o_CLK_5MHz  : out STD_LOGIC;  -- horloge divise utilise pour le circuit             
            o_S_1Hz     : out  STD_LOGIC  -- Signal temoin 1 Hz
             );
@@ -72,9 +77,66 @@ architecture BEHAVIORAL of AppCombi_top is
              o_AFFSSD     : out  STD_LOGIC_VECTOR (7 downto 0)  
            );
    end component;
-   
+   --------------------------------------------------
+ 
+   component Thermo2Bin is
+  Port ( ADCth : in STD_LOGIC_VECTOR(11 downto 0);
+         ADCbin: out STD_LOGIC_VECTOR(3 downto 0);
+         erreurT2B: out STD_LOGIC   
+    );
+    end component;
+    
+      SIGNAL ADCbin : STD_LOGIC_VECTOR(3 downto 0);
+      SIGNAL erreurT2B : STD_LOGIC;
+    
+    component Fct2_3 is
+        Port ( ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
+               A2_3 : out STD_LOGIC_VECTOR (2 downto 0));
+    end component;
+    
+    component Decodeur3_8 is
+        Port (	A2_3 : in STD_LOGIC_VECTOR(2 downto 0);
+                LED	 : out STD_LOGIC_VECTOR(7 downto 0)
+        );
+    end component;
+    
+    SIGNAL LED : STD_LOGIC_VECTOR(7 downto 0);
+    
+component Parite is
+    Port ( S1 : in STD_LOGIC;
+           ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
+           parite : out STD_LOGIC
+    );
+end component;
 
-begin
+
+component BIN2DualBCD is
+    Port ( ADCbin : in STD_LOGIC_VECTOR(3 downto 0);
+           Dizaines : out STD_LOGIC_VECTOR(3 downto 0);
+           Unites_ns : out STD_LOGIC_VECTOR(3 downto 0);
+           Code_signe : out STD_LOGIC_VECTOR(3 downto 0);
+           Unite_s : out STD_LOGIC_VECTOR(3 downto 0));
+end component;
+
+
+component Bouton2Bin is
+  Port (   ADCbin : in STD_LOGIC_VECTOR (3 downto 0);
+           Dizaines : in STD_LOGIC_VECTOR (3 downto 0);
+           Unites_ns : in STD_LOGIC_VECTOR (3 downto 0);
+           Code_signe : in STD_LOGIC_VECTOR (3 downto 0);
+           Unites_s : in STD_LOGIC_VECTOR (3 downto 0);
+           erreur : in STD_LOGIC;
+           BTN :    in STD_LOGIC_VECTOR(1 downto 0);
+           S1 : in STD_LOGIC;
+           S2 : in STD_LOGIC;
+           DAFF0 : out STD_LOGIC_VECTOR(3 downto 0);
+           DAFF1 : out STD_LOGIC_VECTOR(3 downto 0));           
+end component;
+
+    begin
+
+
+
   
     inst_synch : synchro_module_v2
      generic map (const_CLK_syst_MHz => freq_sys_MHz)
@@ -95,15 +157,15 @@ begin
        );
                    
                      
-   d_opa               <=  i_sw;                        -- operande A sur interrupteurs
-   d_opb               <=  i_btn;                       -- operande B sur boutons
-   d_cin               <=  '0';                     -- la retenue d'entrée alterne 0 1 a 1 Hz
-      
-   d_AFF0              <=  d_sum(3 downto 0);           -- Le resultat de votre additionneur affiché sur PmodSSD(0)
-   d_AFF1              <=  '0' & '0' & '0' & d_Cout;    -- La retenue de sortie affichée sur PmodSSD(1) (0 ou 1)
-   o_led6_r            <=  d_Cout;                      -- La led couleur représente aussi la retenue en sortie  Cout
-   o_pmodled           <=  d_opa & d_opb;               -- Les opérandes d'entrés reproduits combinés sur Pmod8LD
-   o_led (3 downto 0)  <=  '0' & '0' & '0' & d_S_1Hz;   -- La LED0 sur la carte représente la retenue d'entrée        
+--   d_opa               <=  i_sw;                        -- operande A sur interrupteurs
+--   d_opb               <=  i_btn;                       -- operande B sur boutons
+   d_cin               <=  '0';                     -- la retenue d'entrï¿½e alterne 0 1 a 1 Hz
+
+   d_AFF0              <=  d_sum(3 downto 0);           -- Le resultat de votre additionneur affichï¿½ sur PmodSSD(0)
+   d_AFF1              <=  '0' & '0' & '0' & d_Cout;    -- La retenue de sortie affichï¿½e sur PmodSSD(1) (0 ou 1)
+--   o_led6_r            <=  d_Cout;                      -- La led couleur reprï¿½sente aussi la retenue en sortie  Cout
+   o_pmodled           <=  d_opa & d_opb;               -- Les opï¿½randes d'entrï¿½s reproduits combinï¿½s sur Pmod8LD
+--   o_led (3 downto 0)  <=  '0' & '0' & '0' & d_S_1Hz;   -- La LED0 sur la carte reprï¿½sente la retenue d'entrï¿½e        
    
    
 end BEHAVIORAL;

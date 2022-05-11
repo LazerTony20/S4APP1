@@ -26,7 +26,7 @@ USE UNISIM.Vcomponents.ALL;
 
 --> L'entity du test bench est vide et elle doit le demeurer
 --> L'entity peut porter le nom que vous voulez mais il est de bonne pratique 
---> d'utiliser le nom du module �  tester avec un suffixe par exemple.
+--> d'utiliser le nom du module �  tester avec un suffixe par exemple.
 
 ENTITY TestBench_CheckErr4bits IS          --> Remarquez que l'ENTITY est vide et doit le demeurer pour un test bench !!!  
 END TestBench_CheckErr4bits;
@@ -34,7 +34,7 @@ END TestBench_CheckErr4bits;
 
 ARCHITECTURE behavioral OF TestBench_CheckErr4bits IS 
 
---> Remplacer ce COMPONENT par celui de votre COMPONENT �  tester 
+--> Remplacer ce COMPONENT par celui de votre COMPONENT �  tester 
     -- Note: vous pouvez copier la partie PORT ( .. ) de l'entity de votre code VHDL 
     -- et l'insérer dans la déclaration COMPONENT.
 --> Si vous voulez comparer 2 modules VHDL, vous pouvez déclarer 2 COMPONENTS 
@@ -65,14 +65,14 @@ end component;
    
 --> Déclarez la constante PERIOD qui est utilisée pour la simulation
 
-   CONSTANT PERIOD    : time := 10 ns;                  --  *** �  ajouter avant le premier BEGIN
+   CONSTANT PERIOD    : time := 10 ns;                  --  *** �  ajouter avant le premier BEGIN
 
---> Il faut faire un port map entre vos signaux internes et le component �  tester
+--> Il faut faire un port map entre vos signaux internes et le component �  tester
 --> NOTE: Si vous voulez comparer 2 modules VHDL, vous devez génréer 2 port maps 
 
 
 BEGIN
-  -- Par le "port-map" suivant, cela revient �  connecter le composant aux signaux internes du tests bench
+  -- Par le "port-map" suivant, cela revient �  connecter le composant aux signaux internes du tests bench
   -- UUT Unit Under Test: ce nom est habituel mais non imposé.
   -- Si on simule deux composantes, on pourrait avoir UUT1, UUT2 par exemple
   
@@ -96,8 +96,8 @@ BEGIN
          previousHasZeros_sim <= '0';
          wait for PERIOD; In4Bit_sim <="0000";   --> Remarquez que "vect_test" contient exactement la table de vérité.    
          wait for PERIOD; In4Bit_sim <="0001";   --> Avec cette façon, on s'assure de ne pas manquer de cas
-         wait for PERIOD; In4Bit_sim <="0010";
-         wait for PERIOD; In4Bit_sim <="0100";
+         wait for PERIOD; In4Bit_sim <="0011";
+         wait for PERIOD; In4Bit_sim <="0111";
          wait for PERIOD; In4Bit_sim <="0101";
          wait for PERIOD; In4Bit_sim <="0110";
          wait for PERIOD; In4Bit_sim <="0111";

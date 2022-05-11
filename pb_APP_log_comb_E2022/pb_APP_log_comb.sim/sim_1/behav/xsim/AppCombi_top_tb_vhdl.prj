@@ -17,11 +17,26 @@ vhdl xil_defaultlib  \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Moins_5.vhd" \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Bouton2Bin.vhd" \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Bin2DualBCD_S.vhd" \
-"../../../../pb_APP_log_comb.srcs/sources_1/new/TestBench_generique.vhd" \
 "../../../../pb_APP_log_comb.srcs/sources_1/new/Parite.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Thermo2Bin.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/CheckErr4bits.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Calculnb1sur4bit.vhd" \
+"../../../../pb_APP_log_comb.srcs/sources_1/new/Segmentation12bits.vhd" \
 
 vhdl2008 xil_defaultlib  \
 "../../../../pb_APP_log_comb.srcs/sim_1/imports/verif/AppCombi_top_tb.vhd" \
+
+vhdl xil_defaultlib  \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBenchAdd4bits.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Fct2_3.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Moins_5.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_BIN2DualBCD_ns.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Bin2DualBCD_S.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Decodeur3_8.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Bouton2Bin.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/Parite_tb.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_Thermo2Bin.vhd" \
+"../../../../pb_APP_log_comb.srcs/sim_1/new/TestBench_CheckErr4bits.vhd" \
 
 # Do not sort compile order
 nosort

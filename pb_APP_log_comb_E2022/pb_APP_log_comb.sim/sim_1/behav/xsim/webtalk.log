@@ -1,13 +1,13 @@
 #-----------------------------------------------------------
 # Webtalk v2020.2 (64-bit)
-# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# SW Build 3064766 on Wed Nov 18 09:12:47 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue May 10 14:38:29 2022
-# Process ID: 9868
-# Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/TestBench_CheckErr4bits_behav/webtalk/xsim_webtalk.tcl -notrace
-# Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/webtalk.log
-# Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim\webtalk.jou
+# Start of session at: Tue May 10 18:50:33 2022
+# Process ID: 87152
+# Current directory: /mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim
+# Command line: wbtcv -mode batch -source /mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: /mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: /mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/webtalk.jou
 #-----------------------------------------------------------
-source C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/TestBench_CheckErr4bits_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue May 10 14:38:29 2022...
+source /mnt/home/gegi/usager/berb0401/Bureau/App1S4/final/S4APP1-main/S4APP1-main/pb_APP_log_comb_E2022/pb_APP_log_comb.sim/sim_1/behav/xsim/xsim.dir/AppCombi_top_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-206] Exiting Webtalk at Tue May 10 18:50:33 2022...

@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue May 10 22:58:45 2022
+# Process ID: 13628
+# Current directory: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent14296 C:\Users\antho\Documents\Programmes\S4APP1\pb_APP_log_comb_E2022\pb_APP_log_comb.xpr
+# Log file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/vivado.log
+# Journal file: C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/antho/Documents/Programmes/S4APP1/pb_APP_log_comb_E2022/pb_APP_log_comb.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:25 ; elapsed = 00:00:12 . Memory (MB): peak = 1091.527 ; gain = 0.000
+exit
+INFO: [Common 17-206] Exiting Vivado at Tue May 10 23:32:15 2022...

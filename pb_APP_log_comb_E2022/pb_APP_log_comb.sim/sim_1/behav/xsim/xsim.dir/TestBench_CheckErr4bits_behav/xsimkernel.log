@@ -1,7 +1,7 @@
-Running: xsim.dir/TestBench_CheckErr4bits_behav/xsimk.exe -simmode gui -wdb TestBench_CheckErr4bits_behav.wdb -simrunnum 0 -socket 51078
+Running: xsim.dir/TestBench_CheckErr4bits_behav/xsimk -simmode gui -wdb TestBench_CheckErr4bits_behav.wdb -simrunnum 0 -socket 34317
 Design successfully loaded
-Design Loading Memory Usage: 5968 KB (Peak: 5968 KB)
-Design Loading CPU Usage: 15 ms
+Design Loading Memory Usage: 33580 KB (Peak: 33700 KB)
+Design Loading CPU Usage: 20 ms
 Simulation completed
-Simulation Memory Usage: 6452 KB (Peak: 6452 KB)
-Simulation CPU Usage: 15 ms
+Simulation Memory Usage: 115316 KB (Peak: 172848 KB)
+Simulation CPU Usage: 20 ms
